@@ -1,6 +1,4 @@
-type Row = Record<string, string | number | boolean | null>;
-
-export function AdminTable({ rows }: { rows: Row[] }) {
+export function AdminTable<T extends object>({ rows }: { rows: T[] }) {
   if (rows.length === 0) {
     return <p>No records.</p>;
   }
@@ -18,13 +16,17 @@ export function AdminTable({ rows }: { rows: Row[] }) {
           </tr>
         </thead>
         <tbody>
-          {rows.map((row, index) => (
-            <tr key={index}>
-              {columns.map((column) => (
-                <td key={column}>{String(row[column] ?? "")}</td>
-              ))}
-            </tr>
-          ))}
+          {rows.map((row, index) => {
+            const record = row as Record<string, unknown>;
+
+            return (
+              <tr key={index}>
+                {columns.map((column) => (
+                  <td key={column}>{String(record[column] ?? "")}</td>
+                ))}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
