@@ -29,12 +29,12 @@ jobs:
 
       - name: Commit lockfile if changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- package-lock.json; then
-            echo "package-lock.json already up to date"
-          else
-            git add package-lock.json
-            git commit -m "chore: generate package lock"
-            git push
-          fi
+             git config user.name "github-actions[bot]"
+      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      if [ -z "$(git status --porcelain package-lock.json)" ]; then
+        echo "package-lock.json already up to date"
+      else
+        git add package-lock.json
+        git commit -m "chore: generate package lock"
+        git push
+      
