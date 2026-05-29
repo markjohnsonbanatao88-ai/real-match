@@ -13,10 +13,10 @@ export function ApplicationForm() {
   if (submitted) {
     return (
       <section className="section confirmation" aria-live="polite">
-        <h2>Assessment received</h2>
+        <h2>Assessment preview received</h2>
         <p>
-          This static MVP does not submit data to a backend yet. The next implementation phase should add secure storage,
-          consent records, and review workflows before collecting real applicant information.
+          This static MVP does not save or send real applicant information yet. The next implementation phase must add
+          secure storage, consent records, review workflows, and privacy controls before collecting real applicant details.
         </p>
       </section>
     );
@@ -24,6 +24,7 @@ export function ApplicationForm() {
 
   return (
     <form className="application-form" onSubmit={handleSubmit}>
+      <p className="form-warning">Static MVP only: this form does not save or send real applicant information yet.</p>
       <label>
         Full name
         <input name="fullName" type="text" autoComplete="name" required />
@@ -69,7 +70,7 @@ export function ApplicationForm() {
         I agree to respectful conduct, truthful information, and independent mutual consent before any connection.
       </label>
       <button className="button primary" type="submit">
-        Submit Private Assessment
+        Submit Private Assessment Preview
       </button>
     </form>
   );
