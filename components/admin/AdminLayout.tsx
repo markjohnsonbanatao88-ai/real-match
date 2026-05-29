@@ -25,6 +25,13 @@ export function AdminLayout({ title, children }: { title: string; children: Reac
       <div className="admin-content">
         <p className="eyebrow">Static MVP only</p>
         <h1>{title}</h1>
+        <div className="admin-warning" role="note">
+          <strong>Internal demo only.</strong>
+          <span>
+            This page contains mock data. No live user data, authentication, payments, verification, messaging, or member
+            operations are active.
+          </span>
+        </div>
         {children}
       </div>
     </section>
