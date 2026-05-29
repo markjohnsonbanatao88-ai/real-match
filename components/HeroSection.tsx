@@ -6,8 +6,8 @@ export function HeroSection() {
       <p className="eyebrow">Private verified social introductions</p>
       <h1>Private Verified Social Introductions</h1>
       <p className="hero-copy">
-        A selective social platform for adults who value identity verification, respectful communication, and optional
-        cultural concierge support.
+        A selective, trust-first social platform for adults who value identity review, respectful communication, and
+        optional cultural concierge support when interest is mutual.
       </p>
       <div className="hero-actions">
         <Link className="button primary" href="/apply">
