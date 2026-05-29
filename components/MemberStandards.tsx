@@ -2,7 +2,7 @@ const standards = [
   "Respectful communication",
   "Truthful identity and profile information",
   "No coercion, harassment, or pressure",
-  "No transactional romantic or sexual expectations",
+  "No transactional expectations or special treatment demands",
   "Independent mutual consent before any connection",
   "Immediate respect for blocks, pauses, and declines"
 ];
