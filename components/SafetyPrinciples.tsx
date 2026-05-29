@@ -1,9 +1,9 @@
 const principles = [
   "Members must be consenting adults.",
   "No member is pressured to communicate or meet.",
-  "Profiles are not public inventory.",
+  "Profiles stay private unless visibility is clearly approved.",
   "Declines must be respected immediately.",
-  "Concierge support is logistical, not romantic brokerage.",
+  "Concierge support is logistical, not outcome brokerage.",
   "Reports and safety concerns must be documented and escalated."
 ];
 
