@@ -11,6 +11,8 @@
   --line: #ded6c8;
   --gold: #9d7a3d;
   --dark: #151515;
+  --warning-bg: #fff3d8;
+  --warning-line: #d9a441;
 }
 
 * {
@@ -227,6 +229,22 @@ label {
   font-weight: 500 !important;
 }
 
+.form-warning,
+.legal-warning,
+.admin-warning {
+  border: 1px solid var(--warning-line);
+  background: var(--warning-bg);
+  border-radius: 18px;
+  padding: 14px 16px;
+  color: #5f4300;
+}
+
+.admin-warning {
+  display: grid;
+  gap: 6px;
+  margin: 18px 0 24px;
+}
+
 .legal-disclaimer {
   max-width: 1180px;
   margin: 24px auto;
@@ -303,6 +321,18 @@ th {
   .site-header,
   .admin-page {
     display: block;
+  }
+
+  .site-header {
+    padding-top: 18px;
+  }
+
+  .hero-section,
+  .page-hero,
+  .section,
+  .legal-page,
+  .admin-page {
+    padding: 40px 18px;
   }
 
   .site-nav {
