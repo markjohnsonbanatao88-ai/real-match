@@ -1,5 +1,6 @@
 name: Generate package lock
 
+# Triggered by repository changes or manual workflow dispatch.
 on:
   workflow_dispatch:
   push:
