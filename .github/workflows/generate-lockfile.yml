@@ -37,4 +37,5 @@ jobs:
         git add package-lock.json
         git commit -m "chore: generate package lock"
         git push
-      
+
+              fi
