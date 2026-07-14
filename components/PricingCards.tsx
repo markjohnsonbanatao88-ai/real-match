@@ -28,12 +28,12 @@ const plans = [
 export function PricingCards() {
   return (
     <section className="section">
-      <p className="eyebrow">Pricing</p>
+      <p className="eyebrow">Membership</p>
       <h2>You pay for matchmaking — never for a person</h2>
       <div className="card-grid three">
         {plans.map((plan) => (
-          <article className={plan.featured ? "card featured" : "card"} key={plan.name}>
-            {plan.featured ? <span className="card-tag">Most popular</span> : null}
+          <article className={plan.featured ? "card featured" : "card"} key={plan.name} data-reveal>
+            {plan.featured ? <span className="card-tag">Most chosen</span> : null}
             <h3>{plan.name}</h3>
             <p className="price">
               {plan.price}

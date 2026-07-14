@@ -1,4 +1,3 @@
-import { LegalDisclaimer } from "@/components/LegalDisclaimer";
 import { PricingCards } from "@/components/PricingCards";
 
 export default function PricingPage() {
@@ -13,7 +12,6 @@ export default function PricingPage() {
         </p>
       </section>
       <PricingCards />
-      <LegalDisclaimer />
     </>
   );
 }

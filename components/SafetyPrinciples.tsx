@@ -14,7 +14,7 @@ export function SafetyPrinciples() {
       <h2>Consent and dignity come first</h2>
       <div className="card-grid three">
         {principles.map((principle) => (
-          <article className="card" key={principle}>
+          <article className="card" key={principle} data-reveal>
             <p>{principle}</p>
           </article>
         ))}

@@ -12,7 +12,7 @@ export function MemberStandards() {
     <section className="section">
       <p className="eyebrow">Member standards</p>
       <h2>A community built on respect</h2>
-      <ul className="standards-list">
+      <ul className="standards-list" data-reveal>
         {standards.map((standard) => (
           <li key={standard}>{standard}</li>
         ))}

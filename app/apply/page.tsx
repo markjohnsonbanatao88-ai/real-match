@@ -1,5 +1,4 @@
 import { ApplicationForm } from "@/components/ApplicationForm";
-import { LegalDisclaimer } from "@/components/LegalDisclaimer";
 
 export default function ApplyPage() {
   return (
@@ -12,10 +11,9 @@ export default function ApplyPage() {
           an early preview, so your details are not submitted or stored yet while we finish building secure intake.
         </p>
       </section>
-      <section className="section">
+      <section className="section tight">
         <ApplicationForm />
       </section>
-      <LegalDisclaimer />
     </>
   );
 }

@@ -1,5 +1,4 @@
 import { HowItWorksSteps } from "@/components/HowItWorksSteps";
-import { LegalDisclaimer } from "@/components/LegalDisclaimer";
 
 export default function HowItWorksPage() {
   return (
@@ -13,7 +12,6 @@ export default function HowItWorksPage() {
         </p>
       </section>
       <HowItWorksSteps />
-      <LegalDisclaimer />
     </>
   );
 }

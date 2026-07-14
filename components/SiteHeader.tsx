@@ -3,8 +3,7 @@ import Link from "next/link";
 const navItems = [
   { href: "/how-it-works", label: "How it works" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/safety", label: "Safety" },
-  { href: "/apply", label: "Apply" }
+  { href: "/safety", label: "Safety" }
 ];
 
 export function SiteHeader() {
@@ -25,6 +24,9 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <Link className="button primary nav-cta" href="/apply">
+            Apply
+          </Link>
         </nav>
       </div>
     </header>
