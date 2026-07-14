@@ -1,43 +1,69 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description: "Draft Terms of Service for the Real Match matchmaking service."
+};
+
 export default function TermsPage() {
   return (
-    <article className="legal-page">
-      <p className="eyebrow">Terms</p>
-      <h1>Terms of Service</h1>
-      <p className="legal-warning">
-        Draft terms. Please have these reviewed by qualified counsel in your operating jurisdictions before collecting
-        payments or onboarding live members.
-      </p>
-      <h2>What Real Match is</h2>
-      <p>
-        Real Match is a personal matchmaking and introduction service for verified consenting adults. We introduce
-        members to one another based on compatibility, values, and stated intent.
-      </p>
-      <h2>What we do not do</h2>
-      <p>
-        We do not guarantee a match, relationship, marriage, or any romantic or sexual outcome. We do not arrange
-        marriages, assign partners, or sell access to any member. Fees pay for our matchmaking, coaching, and
-        coordination services only.
-      </p>
-      <h2>Mutual consent</h2>
-      <p>
-        Every introduction requires both members to independently agree before profiles are shared or contact begins.
-        Members may decline, pause, or block at any time, and those choices are respected without penalty.
-      </p>
-      <h2>Member conduct</h2>
-      <p>
-        Members must provide truthful information, treat others with respect, never pressure or coerce, and follow the
-        code of conduct before and during any connection or meeting.
-      </p>
-      <h2>Fees and refunds</h2>
-      <p>
-        Membership and concierge fees are for services rendered. Refund and cancellation terms will be stated clearly at
-        the point of purchase and must comply with applicable consumer-protection law.
-      </p>
-      <h2>Current implementation scope</h2>
-      <p>
-        This site is currently an early preview. Live intake, payments, identity verification, and messaging are not yet
-        active.
-      </p>
-    </article>
+    <section className="section">
+      <div className="wrap">
+        <div className="prose">
+          <p className="eyebrow">Terms</p>
+          <h1>Terms of Service</h1>
+          <p className="legal-warning">Draft for legal review — not final.</p>
+
+          <h2>What Real Match is</h2>
+          <p>
+            Real Match is a personal matchmaking and introduction service for adults. We
+            consider applications, consult with accepted members, prepare private profiles,
+            and make curated introductions between members who we believe may be
+            compatible.
+          </p>
+
+          <h2>What we do not do</h2>
+          <p>
+            We do not guarantee a match, an introduction, a relationship, marriage, or any
+            romantic outcome. We do not arrange marriages, assign partners, or sell access
+            to any member. Fees pay for our matchmaking work only.
+          </p>
+
+          <h2>Mutual consent</h2>
+          <p>
+            Every introduction requires both members to independently agree before any
+            contact is opened. Members may decline, pause, or block at any time, without
+            explanation and without penalty.
+          </p>
+
+          <h2>Membership</h2>
+          <p>
+            Membership runs for a defined period stated at the point of acceptance. Payment
+            is requested only after an application is accepted. If identity verification
+            cannot be completed, membership does not begin and any fee paid is returned.
+          </p>
+
+          <h2>Member conduct</h2>
+          <p>
+            Members must provide truthful information, treat others with respect, never
+            pressure or coerce, and follow the published conduct standards. Breaches can
+            lead to suspension or removal.
+          </p>
+
+          <h2>Fees and refunds</h2>
+          <p>
+            Fees, the service period, and refund terms are stated clearly before any
+            payment and in the published refund policy. Nothing in these terms removes
+            rights you have under applicable consumer law.
+          </p>
+
+          <h2>Current service status</h2>
+          <p>
+            The current operational status of the service is always displayed on this site.
+            While in preview, no applications are processed and no payments are taken.
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }

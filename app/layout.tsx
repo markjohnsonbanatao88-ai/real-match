@@ -1,30 +1,51 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
-import { ScrollReveal } from "@/components/ScrollReveal";
-import { SiteFooter } from "@/components/SiteFooter";
-import { SiteHeader } from "@/components/SiteHeader";
+import { positioning } from "@/content/site";
+import { siteUrl } from "@/lib/config/site";
+import { SiteFooter } from "@/components/layout/SiteFooter";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { StatusBanner } from "@/components/layout/StatusBanner";
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap"
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
-  title: "Real Match | Private Matchmaking",
-  description:
-    "A discreet, personal matchmaking service that introduces verified members who are serious about finding love — with mutual consent at every step."
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Real Match — Private, human-led introductions",
+    template: "%s — Real Match"
+  },
+  description: positioning,
+  openGraph: {
+    siteName: "Real Match",
+    title: "Real Match — Private, human-led introductions",
+    description: positioning,
+    type: "website"
+  }
 };
-
-// Adds the reveal-ready flag before paint (unless the visitor prefers reduced
-// motion) so scroll animations never cause a flash of hidden content.
-const revealBootstrap =
-  "try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('reveal-ready')}}catch(e){}";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${fraunces.variable} ${manrope.variable}`}>
       <body>
-        <script dangerouslySetInnerHTML={{ __html: revealBootstrap }} />
+        <a className="skip-link" href="#main-content">
+          Skip to main content
+        </a>
+        <StatusBanner />
         <SiteHeader />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <SiteFooter />
-        <ScrollReveal />
       </body>
     </html>
   );

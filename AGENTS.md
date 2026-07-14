@@ -1,36 +1,51 @@
 # Agent Instructions
 
-Real Match is a personal, two-sided matchmaking service. It is honest about being matchmaking, and it holds firm ethical lines.
-
-## Product frame
-
-Real Match introduces verified consenting adults to one another based on compatibility, values, and intent. A human matchmaker curates introductions. Everyone is a member; no one is a product.
+Real Match is a two-sided, human-led matchmaking service. This repository is
+truth-first: a beautiful lie is a failed product.
 
 ## Hard lines — never cross these
 
-- Do not guarantee or imply a match, relationship, marriage, sex, companionship, or any romantic outcome.
-- Do not sell access to members. No one may pay to make another member view, reply to, or meet them.
-- Do not present women, men, or any member as inventory, a catalogue, supply, a reward, or content to be unlocked.
-- Do not build an escalating pay-per-action funnel that gates a specific person's attention behind upgrades.
-- Do not call any fee a success fee or tie fees to outcomes. Fees pay for the matchmaking service only.
-- Keep introductions strictly opt-in on both sides.
+- Never guarantee or imply a match, relationship, marriage, sex, or any
+  romantic outcome.
+- Never sell access to members. No one may pay to make another member view,
+  reply to, or meet them. No escalating pay-per-action funnels. No
+  outcome-based or "success" fees.
+- Never present any member, or one gender, as inventory, a catalogue, or a
+  reward to be unlocked.
+- Never invent people: no fictional founders, staff, testimonials, member
+  counts, satisfaction rates, or credentials. Demonstration profiles must be
+  visibly labelled fictional.
+- Never claim a capability (verification, encryption, review turnaround,
+  active members) that is not implemented and operationally true.
 
-## Positive framing
+## Truth mechanism
 
-- Present the service as two-sided and symmetric: the same offering regardless of gender or who someone hopes to meet.
-- Emphasize verification, mutual consent, member dignity, privacy, and honest pricing.
-- It is fine to say "matchmaking," "introductions," "find love," and "compatible members" — as long as nothing is guaranteed and no one is sold.
+- `lib/config/site.ts` is the single source of truth for status, fees, and
+  capability flags. UI must derive claims from it — never from copy alone.
+- `NEXT_PUBLIC_SERVICE_STATUS` (`preview`/`pilot`/`live`) gates behaviour.
+  It may only advance when the matching gates in `PRODUCTION_READINESS.md`
+  are met.
+- Long-form copy lives in `content/` so it can be audited in one place.
 
 ## Engineering rules
 
-- Keep App Router routes simple and static until backend scope is approved.
-- Run `npm run lint`, `npm run typecheck`, and `npm run build` after code changes when available.
-- Do not add backend, auth, database, payments, ID uploads, or member messaging unless specifically requested.
-- Do not commit secrets. Keep `.env.example` placeholder-only.
-- Prefer boring compliance, auditability, consent, data minimization, and safety over flashy features.
+- Zero new runtime dependencies without a working build environment to
+  regenerate `package-lock.json` and verify the build. CI uses `npm ci`.
+- CI must never write to the repository (no auto-committed lockfiles).
+- Server-side only for anything sensitive; the Supabase service-role key is
+  server-only and never `NEXT_PUBLIC_`.
+- Keep components in `components/{layout,marketing,forms,profiles,safety,admin}`;
+  copy in `content/`; config in `lib/config`.
+- Accessibility is a requirement, not polish: labels, error announcements,
+  focus management, keyboard support, reduced-motion.
+- Run `npm run lint`, `npm run typecheck`, and `npm run build` when available;
+  otherwise state plainly that they were not run.
+- Do not commit secrets. `.env.example` stays placeholder-only.
 
-## Copy guardrail
+## Copy standard
 
-Approved language: personal matchmaking, verified members, curated introductions, mutual consent, matchmaking membership, optional concierge coordination.
-
-Forbidden language: guaranteed match, success fee, buy introductions, access to women/men, handpicked girls, pay to unlock, catalogue of members, mail-order anything.
+Calm, warm, precise, human. Short paragraphs. No robotic luxury jargon, no
+status/wealth signalling, no nationality fetishization, no legal panic, no
+absolute privacy/safety promises. Approved framing: private matchmaking,
+curated introductions, human review, mutual approval, controlled profile
+visibility.

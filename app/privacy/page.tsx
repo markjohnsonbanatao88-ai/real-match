@@ -1,34 +1,70 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Notice",
+  description: "Draft privacy notice for the Real Match matchmaking service."
+};
+
 export default function PrivacyPage() {
   return (
-    <article className="legal-page">
-      <p className="eyebrow">Privacy</p>
-      <h1>Privacy Notice</h1>
-      <p className="legal-warning">
-        Draft notice. Please have this reviewed by qualified counsel and mapped to your actual data systems before
-        collecting any real member data.
-      </p>
-      <h2>Data minimization</h2>
-      <p>
-        We collect only what we need to review applications, verify identity, keep members safe, record consent, and run
-        the matchmaking service. We do not collect sensitive information we do not need.
-      </p>
-      <h2>How your information is shared</h2>
-      <p>
-        Your profile is private by default. It is only shared with another member when there is mutual interest, and only
-        the details you have approved for sharing. We never sell member data.
-      </p>
-      <h2>Identity documents</h2>
-      <p>
-        Verification documents are handled under strict access controls and deleted once verification is complete, with a
-        record kept that deletion took place. Secure handling must be fully implemented before any live upload is enabled.
-      </p>
-      <h2>Your choices</h2>
-      <p>
-        Members can access, correct, export, or delete their information and can withdraw consent to marketing at any
-        time. Service contact and marketing contact are always kept separate.
-      </p>
-      <h2>Current implementation scope</h2>
-      <p>This site is currently an early preview and does not yet collect, store, or transmit real member data.</p>
-    </article>
+    <section className="section">
+      <div className="wrap">
+        <div className="prose">
+          <p className="eyebrow">Privacy</p>
+          <h1>Privacy Notice</h1>
+          <p className="legal-warning">Draft for legal review — not final.</p>
+
+          <h2>The short version</h2>
+          <p>
+            We collect only what the service needs, show your profile to no one without
+            your approval, never sell your data, and delete what we no longer need. This
+            notice will be finalised with counsel and mapped to the live systems before any
+            real member data is collected.
+          </p>
+
+          <h2>What we collect</h2>
+          <p>
+            Application details you choose to give us, consultation notes, your approved
+            profile, consent records, and — once verification is live — a reference and
+            result from an approved identity-verification provider. We do not intend to
+            hold raw identity documents.
+          </p>
+
+          <h2>How information is shared</h2>
+          <p>
+            Your profile is private by default. It is shared only with a specific member
+            being considered for an introduction with you, only after you approve its
+            contents. Staff access is role-restricted and logged.
+          </p>
+
+          <h2>Retention and deletion</h2>
+          <p>
+            Information is kept only as long as needed for the service, under a documented
+            retention schedule. You can request deletion of your information at any time,
+            and deletion requests are honoured within a documented period.
+          </p>
+
+          <h2>Consent</h2>
+          <p>
+            Service communication and marketing communication are consented to separately.
+            Marketing consent is optional, never bundled, and can be withdrawn at any time.
+          </p>
+
+          <h2>Cookies and analytics</h2>
+          <p>
+            This site currently sets no cookies and runs no analytics or tracking scripts.
+            If privacy-respecting analytics are added later, this notice will be updated
+            first and consent handled appropriately.
+          </p>
+
+          <h2>Current implementation scope</h2>
+          <p>
+            While the service is in preview, this website does not collect, store, or
+            transmit application data at all — the application form is a demonstration and
+            says so where it appears.
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
