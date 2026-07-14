@@ -1,17 +1,17 @@
 const principles = [
-  "Members must be consenting adults.",
-  "No member is pressured to communicate or meet.",
-  "Profiles stay private unless visibility is clearly approved.",
-  "Declines must be respected immediately.",
-  "Concierge support is logistical, not outcome brokerage.",
-  "Reports and safety concerns must be documented and escalated."
+  "Every member is a consenting adult who chose to apply and join.",
+  "No one is ever pressured to talk, match, or meet.",
+  "Introductions require both members to independently agree.",
+  "Profiles stay private and are shared only when interest is mutual.",
+  "Declines and blocks are respected immediately and without penalty.",
+  "Reports and safety concerns are documented, escalated, and acted on."
 ];
 
 export function SafetyPrinciples() {
   return (
     <section className="section muted">
       <p className="eyebrow">Safety</p>
-      <h2>Member dignity and consent come first</h2>
+      <h2>Consent and dignity come first</h2>
       <div className="card-grid three">
         {principles.map((principle) => (
           <article className="card" key={principle}>

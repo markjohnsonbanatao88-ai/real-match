@@ -5,8 +5,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Real Match | Private Verified Social Introductions",
-  description: "A private verified social-introduction and cultural concierge platform for consenting adults."
+  title: "Real Match | Personal Matchmaking",
+  description:
+    "A personal matchmaking service that introduces verified members who are serious about finding love — with mutual consent at every step."
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

@@ -5,11 +5,11 @@ export default function ApplyPage() {
   return (
     <>
       <section className="page-hero">
-        <p className="eyebrow">Private assessment</p>
-        <h1>Apply for review</h1>
+        <p className="eyebrow">Application</p>
+        <h1>Apply to join Real Match</h1>
         <p>
-          This static MVP does not submit, store, or process real applicant data yet. Real submissions should only be
-          enabled after secure backend, consent records, and review workflows are implemented.
+          Tell us about yourself and what you are looking for. A matchmaker reviews every application personally. This is
+          an early preview, so your details are not submitted or stored yet while we finish building secure intake.
         </p>
       </section>
       <section className="section">

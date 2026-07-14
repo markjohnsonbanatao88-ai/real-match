@@ -1,4 +1,12 @@
-import type { Application, AuditLog, Complaint, Member, Payment, VerificationEvent } from "@/lib/types";
+import type {
+  Application,
+  AuditLog,
+  Complaint,
+  Introduction,
+  Member,
+  Payment,
+  VerificationEvent
+} from "@/lib/types";
 
 export const applications: Application[] = [
   {
@@ -16,11 +24,31 @@ export const applications: Application[] = [
 export const members: Member[] = [
   {
     id: "mem_001",
-    displayName: "Verified Sample",
-    country: "Philippines",
+    displayName: "Sample Member A",
+    country: "United Kingdom",
     verificationStatus: "Mock verified",
     visibilityStatus: "Private",
     riskLevel: "Low"
+  },
+  {
+    id: "mem_002",
+    displayName: "Sample Member B",
+    country: "Spain",
+    verificationStatus: "Mock verified",
+    visibilityStatus: "Private",
+    riskLevel: "Low"
+  }
+];
+
+export const introductions: Introduction[] = [
+  {
+    id: "intro_001",
+    memberAId: "mem_001",
+    memberBId: "mem_002",
+    matchmaker: "Matchmaker (mock)",
+    status: "Both Accepted",
+    mutualConsent: true,
+    createdAt: "2026-05-29"
   }
 ];
 
@@ -43,7 +71,7 @@ export const payments: Payment[] = [
     memberId: "mem_001",
     amount: 299,
     currency: "GBP",
-    feeType: "Verification & Profile Consultation",
+    feeType: "Matchmaking Membership",
     status: "Mock pending"
   }
 ];
@@ -63,7 +91,7 @@ export const auditLogs: AuditLog[] = [
   {
     id: "aud_001",
     actor: "system",
-    action: "Created static MVP mock record",
+    action: "Created preview mock record",
     target: "admin-dashboard",
     timestamp: "2026-05-28T10:00:00Z"
   }

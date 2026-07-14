@@ -13,10 +13,11 @@ export function ApplicationForm() {
   if (submitted) {
     return (
       <section className="section confirmation" aria-live="polite">
-        <h2>Assessment preview received</h2>
+        <h2>Thanks — your application preview is ready</h2>
         <p>
-          This static MVP does not save or send real applicant information yet. The next implementation phase must add
-          secure storage, consent records, review workflows, and privacy controls before collecting real applicant details.
+          This is an early preview, so your details are not saved or sent yet while we finish building secure intake,
+          consent records, and identity review. When those are live, a matchmaker will review your application and reach
+          out about next steps.
         </p>
       </section>
     );
@@ -24,7 +25,9 @@ export function ApplicationForm() {
 
   return (
     <form className="application-form" onSubmit={handleSubmit}>
-      <p className="form-warning">Static MVP only: this form does not save or send real applicant information yet.</p>
+      <p className="form-warning">
+        Preview only: this form does not save or send your information yet. Please don&apos;t enter sensitive details.
+      </p>
       <label>
         Full name
         <input name="fullName" type="text" autoComplete="name" required />
@@ -42,15 +45,15 @@ export function ApplicationForm() {
         <input name="country" type="text" autoComplete="country-name" required />
       </label>
       <label>
-        Professional background
+        A little about you
         <input name="background" type="text" required />
       </label>
       <label>
-        Social intent
+        What are you hoping to find?
         <textarea name="intent" rows={4} required />
       </label>
       <label>
-        Values and lifestyle preferences
+        Values and lifestyle that matter to you
         <textarea name="values" rows={4} required />
       </label>
       <label className="checkbox-row">
@@ -59,18 +62,18 @@ export function ApplicationForm() {
       </label>
       <label className="checkbox-row">
         <input name="serviceConsent" type="checkbox" required />
-        I consent to being contacted about this private assessment.
+        I consent to being contacted by a matchmaker about my application.
       </label>
       <label className="checkbox-row">
         <input name="marketingConsent" type="checkbox" />
-        I separately consent to future marketing contact. I understand this is optional.
+        I separately consent to occasional marketing updates. I understand this is optional.
       </label>
       <label className="checkbox-row">
         <input name="conductAgreement" type="checkbox" required />
-        I agree to respectful conduct, truthful information, and independent mutual consent before any connection.
+        I agree to respectful conduct, truthful information, and mutual consent before any introduction.
       </label>
       <button className="button primary" type="submit">
-        Submit Private Assessment Preview
+        Submit application preview
       </button>
     </form>
   );

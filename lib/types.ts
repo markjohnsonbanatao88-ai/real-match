@@ -61,8 +61,26 @@ export interface Payment {
   memberId: string;
   amount: number;
   currency: "GBP";
-  feeType: "Verification & Profile Consultation" | "Optional Concierge Coordination";
+  feeType: "Matchmaking Membership" | "Dedicated Concierge";
   status: string;
+}
+
+export type IntroductionStatus =
+  | "Suggested"
+  | "One Side Accepted"
+  | "Both Accepted"
+  | "In Conversation"
+  | "Meeting Planned"
+  | "Closed";
+
+export interface Introduction {
+  id: string;
+  memberAId: string;
+  memberBId: string;
+  matchmaker: string;
+  status: IntroductionStatus;
+  mutualConsent: boolean;
+  createdAt: string;
 }
 
 export interface Complaint {

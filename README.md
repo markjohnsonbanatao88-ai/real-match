@@ -1,42 +1,48 @@
 # Real Match
 
-Real Match is a private verified social-introduction and cultural concierge platform for consenting adults.
+Real Match is a personal matchmaking service for verified consenting adults who are serious about finding a genuine relationship.
 
-The platform does **not** arrange marriages, assign partners, guarantee romantic outcomes, broker relationships, or sell access to people. All connections are independently initiated and mutually accepted by verified adult members.
+We get to know each member, hand-select compatible introductions, and support both people through the process. Every introduction happens with mutual consent, and our fees pay for the matchmaking service — never for access to another person.
+
+## What Real Match is
+
+- A two-sided matchmaking and introduction service where **everyone is a member**, not a product
+- Human matchmakers who curate introductions based on values, intent, and compatibility
+- Identity verification so members meet real, sincere people
+- Optional coaching and coordination support for meetings both members have agreed to
+
+## Hard lines (do not cross)
+
+Real Match must never become a service that:
+
+- guarantees a match, relationship, marriage, sex, or any romantic outcome
+- sells access to members, or lets anyone pay to make another member view, reply to, or meet them
+- presents one gender (or any member) as inventory, a catalogue, or a reward to be unlocked
+- gates a specific person's attention behind an escalating pay-per-action funnel
+- charges an outcome-based or "success" fee
+
+If the product behavior and the public disclaimer diverge, the disclaimer is worthless. The platform must operate exactly as described: member-driven, consent-based, verification-focused, and honest about what fees buy.
 
 ## Current scope
 
-This repository currently targets a static MVP foundation:
+This repository is an early preview / static front end:
 
-- public landing pages
-- application flow
-- legal-safe positioning
-- compliance documentation
-- admin dashboard mock screens
+- public marketing and process pages
+- application flow (preview only — no real submission yet)
+- draft legal pages (Terms, Privacy)
+- matchmaker console with mock data
 - TypeScript data models
 - mock data only
 
 No backend, authentication, database, payments, identity-document upload, or member messaging is implemented yet.
 
-## Core services
+## Service tiers
 
-- Private assessment
-- Identity verification readiness
-- Profile consultation
-- Member standards
-- Optional logistical concierge coordination
+- Membership Application — Free
+- Matchmaking Membership — £299 (matchmaking service and time)
+- Dedicated Concierge — £600 (optional coaching and coordination add-on)
 
-## Forbidden positioning
-
-Do not describe Real Match as:
-
-- a matchmaking agency
-- a marriage agency
-- a mail-order bride service
-- a guaranteed relationship service
-- a platform for buying access to people
-- a service that assigns partners
-- a service that guarantees meetings, romance, sex, marriage, or companionship
+Fees are for the matchmaker's work. They do not buy outcomes or access to any member.
 
 ## Local setup
 
@@ -52,7 +58,3 @@ npm run lint
 npm run typecheck
 npm run build
 ```
-
-## Compliance principle
-
-If the product behavior and the public disclaimer diverge, the disclaimer is worthless. The platform must operate exactly as described: user-driven, consent-based, verification-focused, and outcome-neutral.
